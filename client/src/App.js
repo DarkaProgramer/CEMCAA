@@ -4,6 +4,7 @@ import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
+import Chatbot from "./components/Chatbot";
 
 // Páginas
 import Home from "./pages/Home";
@@ -177,6 +178,8 @@ function App() {
                 </>
               )}
             </ul>
+                  {/* ===== CHATBOT ===== */}
+      <Chatbot />
           </div>
         )}
 
@@ -210,6 +213,7 @@ function App() {
           Mascotas y Adopciones.
         </footer>
       </Router>
+      
     </div>
   );
 }

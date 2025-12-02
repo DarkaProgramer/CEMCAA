@@ -3,48 +3,48 @@ import React, { useState, useEffect, useRef } from "react";
 /* =========================
    BASE DE CONOCIMIENTO
 ========================= */
-const KB = {
-  "🐶 Alimentación (Perros)": [
-    { q: "¿Cuánto debe comer un perro?", a: "Chico: 1 taza, Mediano: 2, Grande: 3-4 tazas al día." },
-    { q: "¿Qué no pueden comer?", a: "Chocolate, uvas, cebolla, ajo, café, alcohol y huesos cocidos." },
-    { q: "¿Cuántas veces comen?", a: "Adultos 2 veces, cachorros 3 veces." }
-  ],
-  "🐱 Alimentación (Gatos)": [
-    { q: "¿Cuánto debe comer un gato?", a: "Entre 40 y 60g de alimento seco." },
-    { q: "¿Qué no pueden comer?", a: "Leche de vaca, chocolate, ajo, cebolla, atún excesivo." },
-    { q: "¿Cuántas veces comen?", a: "2 o 3 veces al día." }
-  ],
-  "💉 Salud (Perros)": [
-    { q: "¿Qué vacunas necesita?", a: "Múltiple y rabia." },
-    { q: "¿Cada cuándo desparasitar?", a: "Cada 3 meses." },
-    { q: "¿Cuándo esterilizar?", a: "Desde los 6 meses." }
-  ],
-  "💉 Salud (Gatos)": [
-    { q: "¿Qué vacunas necesita?", a: "Triple felina y rabia." },
-    { q: "¿Cada cuándo desparasitar?", a: "Cada 3 meses." },
-    { q: "¿Cuándo esterilizar?", a: "Entre 5 y 6 meses." }
-  ],
-  "🏠 Adopción": [
-    { q: "¿Qué necesito?", a: "INE y compromiso." },
-    { q: "¿Cuánto cuesta adoptar?", a: "Es gratuita." },
-    { q: "¿Cuánto tarda?", a: "De 2 a 4 semanas." }
-  ],
-  "🧼 Higiene": [
-    { q: "¿Cada cuándo bañar perro?", a: "cada 2 o 3 semanas." },
-    { q: "¿Cada cuándo bañar gato?", a: "Solo si es necesario." },
-    { q: "¿Corte de uñas?", a: "Una vez al mes." }
-  ],
-  "🐾 Comportamiento": [
-    { q: "¿Por qué ladran?", a: "Estrés o ansiedad." },
-    { q: "¿Por qué muerden?", a: "Juego o defensa." },
-    { q: "¿Cómo educar?", a: "Premios y rutina." }
-  ],
-  "🚨 Emergencias": [
-    { q: "¿No come?", a: "Ve al veterinario si pasan 24h." },
-    { q: "¿Vomita?", a: "Atención inmediata." },
-    { q: "¿Heridas?", a: "Limpia y consulta." }
-  ]
-};
+  const KB = {
+    "🐶 Alimentación (Perros)": [
+      { q: "¿Cuánto debe comer un perro?", a: "Chico: 1 taza, Mediano: 2, Grande: 3-4 tazas al día." },
+      { q: "¿Qué no pueden comer?", a: "Chocolate, uvas, cebolla, ajo, café, alcohol y huesos cocidos." },
+      { q: "¿Cuántas veces comen?", a: "Adultos 2 veces, cachorros 3 veces." }
+    ],
+    "🐱 Alimentación (Gatos)": [
+      { q: "¿Cuánto debe comer un gato?", a: "Entre 40 y 60g de alimento seco." },
+      { q: "¿Qué no pueden comer?", a: "Leche de vaca, chocolate, ajo, cebolla, atún excesivo." },
+      { q: "¿Cuántas veces comen?", a: "2 o 3 veces al día." }
+    ],
+    "💉 Salud (Perros)": [
+      { q: "¿Qué vacunas necesita?", a: "Múltiple y rabia." },
+      { q: "¿Cada cuándo desparasitar?", a: "Cada 3 meses." },
+      { q: "¿Cuándo esterilizar?", a: "Desde los 6 meses." }
+    ],
+    "💉 Salud (Gatos)": [
+      { q: "¿Qué vacunas necesita?", a: "Triple felina y rabia." },
+      { q: "¿Cada cuándo desparasitar?", a: "Cada 3 meses." },
+      { q: "¿Cuándo esterilizar?", a: "Entre 5 y 6 meses." }
+    ],
+    "🏠 Adopción": [
+      { q: "¿Qué necesito?", a: "INE y compromiso." },
+      { q: "¿Cuánto cuesta adoptar?", a: "Es gratuita." },
+      { q: "¿Cuánto tarda?", a: "De 2 a 4 semanas." }
+    ],
+    "🧼 Higiene": [
+      { q: "¿Cada cuándo bañar perro?", a: "cada 2 o 3 semanas." },
+      { q: "¿Cada cuándo bañar gato?", a: "Solo si es necesario." },
+      { q: "¿Corte de uñas?", a: "Una vez al mes." }
+    ],
+    "🐾 Comportamiento": [
+      { q: "¿Por qué ladran?", a: "Estrés o ansiedad." },
+      { q: "¿Por qué muerden?", a: "Juego o defensa." },
+      { q: "¿Cómo educar?", a: "Premios y rutina." }
+    ],
+    "🚨 Emergencias": [
+      { q: "¿No come?", a: "Ve al veterinario si pasan 24h." },
+      { q: "¿Vomita?", a: "Atención inmediata." },
+      { q: "¿Heridas?", a: "Limpia y consulta." }
+    ]
+  };
 
 export default function Chatbot() {
 

@@ -4,209 +4,179 @@ import { Container, Card, Row, Col } from "react-bootstrap";
 import MapaGeolocalizacion from "../components/MapaGeolocalizacion";
 import Chatbot from "../components/Chatbot";
 import BibliotecaRazas from "../components/BibliotecaRazas";
+import SocialCarousel from "../components/SocialCarousel";
 
 function Home() {
   return (
     <div style={{ backgroundColor: "#FAF9F6", minHeight: "100vh" }}>
-      {/* ===== Encabezado con logo ===== */}
-      <header
-        style={{
-          backgroundColor: "#BAEDB9",
-          color: "white",
-          padding: "15px 0",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "15px",
-          boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-        }}
-      >
+
+      {/* ===== ENCABEZADO ===== */}
+      <header style={{
+        backgroundColor: "#BAEDB9",
+        color: "white",
+        padding: "15px 0",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "15px",
+        boxShadow: "0 2px 6px rgba(0,0,0,0.1)"
+      }}>
         <img
           src="/logo.jpeg"
           alt="Logo CEMCAA"
-          style={{
-            width: "60px",
-            height: "60px",
-            borderRadius: "50%",
-            objectFit: "cover",
-            border: "2px solid white",
-          }}
+          style={{ width: "60px", height: "60px", borderRadius: "50%", border: "2px solid white" }}
         />
         <h2 className="fw-bold mb-0">CEMCAA</h2>
       </header>
 
-      {/* Banner principal fijo */}
-      <div
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1601758123927-3b7b4d2b27d3?auto=format&fit=crop&w=1350&q=80')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "450px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-          color: "white",
-          position: "relative",
-          filter: "brightness(90%)",
-        }}
-      >
-        <div
-          style={{
-            backgroundColor: "rgba(0, 0, 0, 0.45)",
-            padding: "40px",
-            borderRadius: "10px",
-          }}
-        >
+      {/* ===== BANNER ===== */}
+      <div style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1601758123927-3b7b4d2b27d3?auto=format&fit=crop&w=1350&q=80')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "450px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        color: "white",
+        filter: "brightness(90%)"
+      }}>
+        <div style={{
+          backgroundColor: "rgba(0,0,0,0.45)",
+          padding: "40px",
+          borderRadius: "10px"
+        }}>
           <h1 className="fw-bold">CEMCAA</h1>
           <p style={{ fontSize: "1.2rem" }}>
-            Amor, rescate y esperanza para cada peludo sin hogar. 🐾
+            Amor, rescate y esperanza para cada peludo sin hogar 🐾
           </p>
         </div>
       </div>
 
-      {/* Sección: Quiénes somos */}
-      <Container className="my-5">
-        <Row className="align-items-center">
-          <Col md={6}>
-            <img
-              src="https://www.shutterstock.com/shutterstock/photos/760768426/display_1500/stock-vector-dog-s-logo-with-a-cat-in-a-flat-style-760768426.jpg"
-              alt="Logo CEMCAA"
-              style={{ width: "200px", height: "auto" }}
-            />
-          </Col>
-          <Col md={6}>
-            <h3 className="fw-bold text-success mb-3">¿Quiénes somos?</h3>
-            <p>
-              En <strong>CEMCAA</strong> trabajamos para rescatar, cuidar y
-              rehabilitar perros y gatos en situación de calle. Les brindamos
-              refugio, atención médica y amor hasta encontrarles un hogar
-              permanente.
-            </p>
-            <p>
-              Nuestra labor se basa en la empatía, el respeto y el compromiso
-              hacia cada vida animal.
-            </p>
-          </Col>
-        </Row>
-      </Container>
+      {/* ===== QUIÉNES SOMOS (DISEÑO MEJORADO) ===== */}
+<Container className="my-6 py-5">
+  <Row className="align-items-center justify-content-center">
 
-      {/* Sección: Historias felices - TODAS LAS TARJETAS A LA MISMA ALTURA */}
+    {/* IMAGEN */}
+    <Col md={5} className="text-center mb-3">
+      <img
+        src="https://www.shutterstock.com/shutterstock/photos/760768426/display_1500/stock-vector-dog-s-logo-with-a-cat-in-a-flat-style-760768426.jpg"
+        alt="CEMCAA"
+        style={{
+          width: "90%",
+          maxWidth: "350px",
+          borderRadius: "20px",
+          boxShadow: "0 12px 25px rgba(0,0,0,.25)",
+          padding: "10px",
+          background: "white"
+        }}
+      />
+    </Col>
+
+    {/* TEXTO */}
+    <Col md={6}>
+      <h2 className="fw-bold text-success mb-3">
+        Nuestra misión es proteger vidas
+      </h2>
+
+      <p style={{ fontSize: "1.05rem" }}>
+        En <strong>CEMCAA</strong> somos una organización dedicada a cambiar historias de abandono en historias de amor.
+        Rescatamos animales en riesgo, los curamos, los rehabilitamos y buscamos para ellos un hogar digno y responsable.
+      </p>
+
+      <p>
+        Trabajamos todos los días con un solo objetivo: devolver esperanza a quienes no tienen voz.
+      </p>
+
+      <ul style={{ listStyle: "none", paddingLeft: 0 }}>
+        <li>🐾 Rescate y protección animal</li>
+        <li>🏥 Atención veterinaria</li>
+        <li>🏠 Adopciones responsables</li>
+        <li>💚 Seguimiento post-adopción</li>
+        <li>🤝 Conciencia social</li>
+      </ul>
+    </Col>
+
+  </Row>
+</Container>
+
+      {/* ===== HISTORIAS ===== */}
+    <Container className="my-5">
+  <h3 className="fw-bold text-warning text-center mb-4">
+    Historias que inspiran
+  </h3>
+
+  <div style={{
+    display: "flex",
+    gap: "20px",
+    overflowX: "auto",
+    paddingBottom: "15px"
+  }}>
+    <Card style={{ minWidth: "300px" }} className="shadow-sm">
+      <Card.Img src="https://image.shutterstock.com/image-photo/beagle-dog-suitcase-things-260nw-2481066257.jpg" />
+      <Card.Body>
+        <Card.Title>Luna</Card.Title>
+        <Card.Text>Luna pasó varios meses viviendo en la calle, buscando comida y refugio cada noche. Fue rescatada en muy mal estado, con miedo a las personas y sin confiar en nadie.</Card.Text>
+      </Card.Body>
+    </Card>
+
+    <Card style={{ minWidth: "300px" }} className="shadow-sm">
+      <Card.Img src="https://image.shutterstock.com/image-photo/family-enjoying-quality-time-together-260nw-2585353217.jpg" />
+      <Card.Body>
+        <Card.Title>Max</Card.Title>
+        <Card.Text>Max fue entregado al refugio después de que su antigua familia ya no pudo hacerse cargo de él. Durante semanas parecía triste, observando en silencio, esperando que alguien lo eligiera otra vez.</Card.Text>
+      </Card.Body>
+    </Card>
+
+    <Card style={{ minWidth: "300px" }} className="shadow-sm">
+      <Card.Img src="https://image.shutterstock.com/image-photo/daily-concept-japanese-bobtail-cat-260nw-2318160345.jpg" />
+      <Card.Body>
+        <Card.Title>Kitty</Card.Title>
+        <Card.Text>Kitty fue encontrada asustada y herida, escondida bajo un automóvil durante una tormenta. No se dejaba tocar y temblaba al ver personas.</Card.Text>
+      </Card.Body>
+    </Card>
+  </div>
+</Container>
+
+
+      {/* ===== REDES SOCIALES ===== */}
       <Container className="my-5 text-center">
-        <h3 className="fw-bold text-warning mb-4">Historias que inspiran</h3>
-        <Row className="g-4 mb-5 align-items-stretch">
-          {/* Luna */}
-          <Col md={4}>
-            <Card className="h-100 shadow-sm d-flex flex-column">
-              <div style={{ height: "250px", overflow: "hidden" }}>
-                <Card.Img
-                  variant="top"
-                  src="https://image.shutterstock.com/image-photo/beagle-dog-suitcase-things-260nw-2481066257.jpg"
-                  style={{ 
-                    height: "100%", 
-                    width: "100%", 
-                    objectFit: "cover" 
-                  }}
-                  alt="Luna"
-                />
-              </div>
-              <Card.Body className="d-flex flex-column">
-                <Card.Title>Luna</Card.Title>
-                <Card.Text className="flex-grow-1">
-                  Luna fue rescatada de las calles y ahora disfruta de una
-                  familia que la ama.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          {/* Max */}
-          <Col md={4}>
-            <Card className="h-100 shadow-sm d-flex flex-column">
-              <div style={{ height: "250px", overflow: "hidden" }}>
-                <Card.Img
-                  variant="top"
-                  src="https://image.shutterstock.com/image-photo/family-enjoying-quality-time-together-260nw-2585353217.jpg"
-                  style={{ 
-                    height: "100%", 
-                    width: "100%", 
-                    objectFit: "cover" 
-                  }}
-                  alt="Max"
-                />
-              </div>
-              <Card.Body className="d-flex flex-column">
-                <Card.Title>Max</Card.Title>
-                <Card.Text className="flex-grow-1">
-                  Max encontró su hogar ideal donde recibe cariño y cuidados
-                  diarios.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          {/* Kitty */}
-          <Col md={4}>
-            <Card className="h-100 shadow-sm d-flex flex-column">
-              <div style={{ height: "250px", overflow: "hidden" }}>
-                <Card.Img
-                  variant="top"
-                  src="https://image.shutterstock.com/image-photo/daily-concept-japanese-bobtail-cat-260nw-2318160345.jpg"
-                  style={{ 
-                    height: "100%", 
-                    width: "100%", 
-                    objectFit: "cover" 
-                  }}
-                  alt="Kitty"
-                />
-              </div>
-              <Card.Body className="d-flex flex-column">
-                <Card.Title>Kitty</Card.Title>
-                <Card.Text className="flex-grow-1">
-                  Kitty, antes llamada Michi, ahora vive feliz y segura con su
-                  nueva familia.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+        <h3 className="fw-bold text-primary mb-4">📲 Nuestras redes sociales</h3>
+        <p>
+          Aquí puedes ver nuestras publicaciones más recientes de Facebook e Instagram.
+        </p>
+        <SocialCarousel />
       </Container>
 
-      {/* ===== SECCIÓN MAPA ===== */}
+      {/* ===== MAPA ===== */}
       <Container className="my-5">
-        <h3 className="fw-bold text-success text-center mb-4">
-          Encuéntranos aquí
-        </h3>
+        <h3 className="fw-bold text-success text-center mb-4">📍 Encuéntranos aquí</h3>
         <MapaGeolocalizacion />
       </Container>
 
-      {/* ===== SECCIÓN BIBLIOTECA DE RAZAS ===== */}
+      {/* ===== BIBLIOTECA ===== */}
       <Container className="my-5">
         <BibliotecaRazas />
       </Container>
 
-      {/* Sección: Mensaje final */}
+      {/* ===== MENSAJE FINAL ===== */}
       <Container className="my-5">
-        <Card
-          className="text-center shadow-sm border-0 p-5"
-          style={{
-            backgroundColor: "#81B29A",
-            color: "white",
-            borderRadius: "15px",
-          }}
-        >
-          <h3 className="fw-bold mb-3">Ellos solo necesitan una oportunidad</h3>
+        <Card style={{
+          backgroundColor: "#81B29A",
+          color: "white",
+          borderRadius: "15px"
+        }} className="text-center p-5 shadow-sm border-0">
+          <h3>Ellos solo necesitan una oportunidad</h3>
           <p style={{ maxWidth: "700px", margin: "0 auto" }}>
-            Cada adopción es una historia de esperanza. Gracias a personas como
-            tú, seguimos cambiando vidas y creando hogares felices.
+            Cada adopción cambia dos vidas: la de ellos y la tuya ❤️
           </p>
         </Card>
       </Container>
 
       {/* ===== CHATBOT ===== */}
       <Chatbot />
-      <div>     </div>
+
     </div>
   );
 }
