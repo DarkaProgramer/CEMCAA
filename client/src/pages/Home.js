@@ -206,6 +206,7 @@ function Home() {
 
       {/* ===== CHATBOT ===== */}
       <Chatbot />
+      <div>     </div>
     </div>
   );
 }
