@@ -1,6 +1,6 @@
 // src/pages/Home.js
-import React from "react";
-import { Container, Card, Row, Col } from "react-bootstrap";
+import {React, Container, Card, Row, Col} from "../Facade/AppFacade";
+
 
 function Home() {
   return (

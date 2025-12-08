@@ -1,9 +1,8 @@
 // src/pages/PanelEmpleados.js
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Card, Button, Spinner, Badge } from "react-bootstrap";
-import Axios from "../config/axios";
-import Swal from "sweetalert2";
+import {useState, useEffect, Container, Row, Col, Card, Button, Spinner, Badge, 
+        axios as Axios, Swal} from "../Facade/AppFacade";
 import "../App.css";
+
 
 function PanelEmpleados() {
   const [vistaActiva, setVistaActiva] = useState("solicitudes");

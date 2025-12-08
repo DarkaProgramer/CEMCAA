@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import axios from "../config/axios";
+import {React, useState, useNavigate, axios} from "../Facade/AppFacade";
 import "../App.css";
+
 
 function Auth({ onLogin }) {
   const navigate = useNavigate();

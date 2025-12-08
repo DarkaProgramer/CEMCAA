@@ -1,9 +1,8 @@
 // src/pages/FormMascPerdida.js
-import React, { useState } from "react";
-import { Form, Button, Row, Col, Card, Image } from "react-bootstrap";
-import Axios from "../config/axios";
-import Swal from "sweetalert2";
+import {React, useState, Form, Button, Row, Col, Card, Image, axios as Axios, Swal} 
+from "../Facade/AppFacade";
 import "../App.css";
+
 
 function FormMascPerdida() {
   const [nombre_mascota, setNombreMascota] = useState("");

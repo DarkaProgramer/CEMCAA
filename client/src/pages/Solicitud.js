@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import axios from "../config/axios";
-import { useNavigate, useParams } from "react-router-dom";
+import {React, useState, useEffect, axios, useNavigate, useParams} from "../Facade/AppFacade";
 import "../styles/solicitud.css";
+
 
 const Solicitud = ({ user }) => {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
-import { FaPaw, FaDog, FaBars, FaTimes, FaUsers, FaClipboardList, FaTasks, FaSignOutAlt, FaPlusCircle, FaExclamationTriangle, FaEnvelopeOpenText } from "react-icons/fa";
-import { useState, useEffect } from "react";
-import axios from "./config/axios";
+// Importa todo desde tu Facade
+import {BrowserRouter as Router, Routes, Route, NavLink, FaDog, FaPaw, FaBars, FaTimes, FaUsers,
+        FaClipboardList, FaTasks, FaSignOutAlt, FaPlusCircle, FaExclamationTriangle, FaEnvelopeOpenText,
+        useState, useEffect, axios} from "./Facade/AppFacade";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
@@ -19,6 +19,7 @@ import ReportarAvistamiento from "./pages/ReportarAvistamiento";
 import ListaSolicitudes from "./pages/ListaSolicitudes"; // ✅ NUEVO
 import SolicitudDetalle from "./pages/SolicitudDetalle"; // ✅ RENOMBRADO
 import Expediente from "./pages/Expediente";
+
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);

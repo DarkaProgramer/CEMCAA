@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import Axios from "../config/axios";
-import { Container, Form, Button } from "react-bootstrap";
+import {React, useState, useEffect, useParams, useNavigate, axios as Axios, 
+        Container, Form, Button} from "../Facade/AppFacade";
 import "../App.css";
+
 
 function ReportarAvistamiento() {
   const { id } = useParams(); // id de la mascota perdida

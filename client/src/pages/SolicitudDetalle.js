@@ -1,7 +1,6 @@
-import React from 'react';
+import {React, useParams} from "../Facade/AppFacade";
+import SolicitudViewer from "../components/Solicitud/SolicitudViewer";
 
-import { useParams } from 'react-router-dom';
-import SolicitudViewer from '../components/Solicitud/SolicitudViewer';
 
 const SolicitudDetalle = () => {
   const { id } = useParams();
