@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Axios from "../config/axios";
+import {React, useState, useEffect, axios as Axios} from "../Facade/AppFacade";
 
 function Empleados() {
   const [id, setId] = useState(null);

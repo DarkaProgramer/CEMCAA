@@ -1,7 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import axios from '../config/axios';
-import { useNavigate } from 'react-router-dom';
-import { Container, Table, Badge, Button, Form, Spinner, Alert } from 'react-bootstrap';
+import {React, useState, useEffect, useCallback, axios, useNavigate, Container, Table,
+        Badge, Button, Form, Spinner, Alert} from "../Facade/AppFacade";
 
 const ListaSolicitudes = ({ userId }) => {
   const navigate = useNavigate();

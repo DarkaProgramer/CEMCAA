@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Card, Button, Form, Alert } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
-import Axios from "../config/axios";
+import {React, useState, useEffect, Container, Row, Col, Card, Button,
+        Form, Alert, useNavigate, axios as Axios} from "../Facade/AppFacade";
 import "../App.css";
 
 function Catalogo() {

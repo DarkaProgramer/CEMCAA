@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { Form, Button, Row, Col, Image, Card } from "react-bootstrap";
-import Axios from "../config/axios";
-import Swal from "sweetalert2";
+import {React, useState, useEffect, useParams, useNavigate, Form, Button, Row, Col, Image,
+        Card, axios as Axios, Swal} from "../Facade/AppFacade";
 import "../App.css";
+
 
 function FormCatalogo() {
   const { id } = useParams();
